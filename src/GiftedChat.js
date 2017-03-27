@@ -114,12 +114,12 @@ class GiftedChat extends React.Component {
     this.initMessages(nextProps.messages);
 
     if(this.props.minInputToolbarHeight !== nextProps.minInputToolbarHeight) {
-        let inputToolbarHeight = this.state.composerHeight + (nextProps.minInputToolbarHeight - MIN_COMPOSER_HEIGHT);
+      let inputToolbarHeight = this.state.composerHeight + (nextProps.minInputToolbarHeight - MIN_COMPOSER_HEIGHT);
 
-        const newMessagesContainerHeight = this.getMaxHeight() - inputToolbarHeight - this.getKeyboardHeight() + this.getBottomOffset();
-        this.setState({
-            messagesContainerHeight: this.prepareMessagesContainerHeight(newMessagesContainerHeight),
-        });
+      const newMessagesContainerHeight = this.getMaxHeight() - inputToolbarHeight - this.getKeyboardHeight() + this.getBottomOffset();
+      this.setState({
+        messagesContainerHeight: this.prepareMessagesContainerHeight(newMessagesContainerHeight),
+      });
     }
   }
 
